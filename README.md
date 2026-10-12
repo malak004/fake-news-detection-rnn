@@ -101,68 +101,9 @@ The predicted class is selected using the highest output probability, and the re
 
 ```text
 fake-news-detection/
-├── xy_train.csv
-├── x_test.csv
 ├── notebook.ipynb
-├── submission.csv
 └── README.md
 ```
-
-
-## How to Run
-
-### 1. Clone the repository
-
-```bash
-git clone <your-repository-url>
-cd fake-news-detection
-```
-
-### 2. Install dependencies
-
-```bash
-pip install numpy pandas nltk scikit-learn tensorflow
-```
-
-### 3. Download the required NLTK resources
-
-Run the following in Python:
-
-```python
-import nltk
-
-nltk.download('punkt_tab')
-nltk.download('stopwords')
-nltk.download('wordnet')
-```
-
-### 4. Prepare the datasets
-
-Place `xy_train.csv` and `x_test.csv` in the expected working directory and ensure they contain the required `text` column. The training dataset must also contain a `label` column.
-
-### 5. Run the notebook
-
-Open `notebook.ipynb` in Jupyter Notebook or Google Colab and execute the cells in order.
-
-## Evaluation
-
-The model is evaluated using:
-
-- **Accuracy** — The proportion of correctly classified examples.
-- **Loss** — The model's classification error according to the selected loss function.
-
-Actual evaluation results should be added here after verifying the model's performance on an appropriate held-out dataset.
-
-## Limitations and Future Improvements
-
-Potential improvements include:
-
-- Comparing RNN performance with LSTM and GRU architectures.
-- Experimenting with different sequence lengths and vocabulary sizes.
-- Adding precision, recall, F1-score, and a confusion matrix.
-- Improving preprocessing and handling missing or duplicate records.
-- Using pretrained word embeddings or transformer-based models.
-- Evaluating on an independent test set to obtain a more reliable estimate of generalization.
 
 ## Disclaimer
 
